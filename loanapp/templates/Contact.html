@@ -1,0 +1,91 @@
+<html>
+{% load static %}
+<title> Contact Us Form </title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<style>
+
+.bg-img{
+background-size: cover;
+width: 65%;
+margin-left: -120px;
+overflow: hidden;
+height: 100vh;
+}
+.box{
+width:30%;
+height:90vh;
+top: 6%;
+background: rgba(240,215,220,0.1);
+color: white;
+left:64%;
+position:absolute;
+box-sizing:border-box;
+padding:40px 50px;
+border-radius: 30px;
+}
+.box input
+{
+width:100%;
+margin-bottom:10px;
+}
+.box input[type="text"]
+{
+border: ridge;
+border-radius: 10px;
+
+border-bottom;1px solid #fff;
+background:transparent;
+outline:none;
+color: black;
+font-family: Arial;
+font-size:16px;}
+.button{
+border:none;
+outline:none;
+height:40px;
+background:#6675df;
+color: white;
+font-size:16px;
+border-radius:20px;
+width: 100%;
+}
+.button:hover{
+cursor:pointer;
+background: #404b46;
+color: white;
+}
+.box a{
+text-decoration:none;
+font-size:12px;
+line-height:20px;
+color:darkgrey;
+}
+.box a:hover
+{
+color:#404b46;
+}
+
+</style>
+
+<div class="bg-img"> 
+<img src= "{% static 'pic/img3.jpg' %}" >
+</div>
+<div class="box">
+<h1 style="font-size:40px; color: black; font-family: Montera; padding-left: 30px;">Send us a Message</h1>
+<form class="gform" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbxF0CYekgJyamOCza8DRhMZbYwwILG6rehQqIITPumtBCh3HtdaG1UZeWIFKuq8mnLb/exec">
+<p style="font-size: 16px; color: black;">Full name</p>
+<input type="text" style="height:40px;" name="name" placeholder="Enter your name..">
+<p style="font-size: 16px; color: black;">Email Address</p>
+<input type="text" style="height:40px;" name="email" placeholder="Enter your email..">
+<p style="font-size: 16px; color: black;">Message</p>
+<input type="text" style="height:90px;" name="message" placeholder="Type your message here..">
+</br></br>
+<button class="button">Send</button>
+
+</form>
+
+<script data-cfasync="false" src="form-submission-handler.js"></script>
+</div>
+</html>

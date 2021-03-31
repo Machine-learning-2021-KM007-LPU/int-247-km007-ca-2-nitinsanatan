@@ -1,0 +1,41 @@
+<html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<style>
+.frame{
+    position: relative; 
+    height:15vh; 
+    width:40vw;
+}
+</style>
+
+<title> Data Visualisation </title>
+<body>
+<div class="frame">
+<center><h1> Loan Approved Data </h1></center>
+<canvas id="myChart"></canvas>
+</div>
+</body>
+<script>
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    type: 'doughnut',
+
+    data: {
+        labels: {{x|safe}},
+        datasets: [{
+            label: 'Loan Approved',
+            backgroundColor: ["rgba(255, 99, 132, 0.7)",
+          "rgba(54, 162, 235, 0.7)"],
+            hoverBackgroundColor: ["rgb(255, 99, 132)",
+          "rgb(54, 162, 235)"],
+            minBarLength: 6,
+            data: {{data|safe}}
+        }]
+    },
+
+    options: {}
+}); 
+</script>
+
+
+</html>
