@@ -24,7 +24,16 @@ Model is preprocessed and missing values are removed. Hyperparameter tuning is d
 Random Forest Model. Confusion Matrices are utilised for evaluation of accuracy score of models.
 
 - ## Feature Engineering
-> Our dataset is contains 690 rows and 16 columns, where first 15 columns are data and last column is showing the Class(+,-) of whether loan is accepted or rejected. There are 9 attributes which contains **Categorical Data** and rest are *Continuous*. Missing values are also there in data denoted by **'?'** 
+> Our dataset is contains 690 rows and 16 columns, where first 15 columns are data and last column is showing the Class(+,-) of whether loan is accepted or rejected. There are 9 attributes which contains **Categorical Data** and rest are **Continuous**. Missing values are also there in data denoted by **'?'** 
 
 ### Feature Identification
-![](img/feature1.JPG)
+> ![](img/feature1.JPG)
+
+### Handling Missing Data
+> ![](img/missing.JPG)
+
+### Label Encoding for Categorical Data
+> ![](img/le.JPG)
+
+### Plotting of dataset
+> ![](img/plot.JPG)
