@@ -18,4 +18,13 @@ In finance, a loan is the lending of money by one or more individuals, organizat
 - CSS
 - Javascript
 
-![](img/hyper.jpg)
+## Model Description
+This is a Classification Probelm where system will predict if a loan will be approved or not. I have employed a Machine Learning Model to process the user input at backend.
+Model is preprocessed and missing values are removed. Hyperparameter tuning is done to get best parameters for data training. Data is trained using 3 techniques; SVM, KNeighbors &
+Random Forest Model. Confusion Matrices are utilised for evaluation of accuracy score of models.
+
+- ## Feature Engineering
+> Our dataset is contains 690 rows and 16 columns, where first 15 columns are data and last column is showing the Class(+,-) of whether loan is accepted or rejected. There are 9 attributes which contains **Categorical Data** and rest are *Continuous*. Missing values are also there in data denoted by **'?'** 
+
+### Feature Identification
+![](img/feature1.JPG)
