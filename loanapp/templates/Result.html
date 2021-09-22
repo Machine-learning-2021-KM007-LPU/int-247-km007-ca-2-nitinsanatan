@@ -1,0 +1,38 @@
+<html>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/stylehome.css' %}">
+
+<div class="bm-img">
+<img src="{% static 'pic/img4.jpg' %}" style="height: 200%;width: 200%;">
+</div>
+<title> Result </title>
+
+<body> 
+
+<div class="loginbox" style="width: 800px; height: 503px; top:48%; background-color: rgba(0,0,0,0.7);">
+<div class="text-block" style="left: 130px; height: 50px; background-color: rgba(255, 81, 0, 0.5);">
+<h1> Prediction Result </h1>
+</div>
+</br></br></br></br></br></br>
+<h2 style="color: aqua;"> Hello {{name}} </h2>
+<h2 style="color:yellow;">Your Entered Data: {{lis}} </h2>
+<h2 style="color: white;"> Result: {{ans}} </h2>
+</br></br>
+<form action="{% url 'Predict' %}">
+<div class="line" style="display: inline-block; float: left; padding-left: 200px;"> 
+<input type="submit" value="Predict Another" />
+</div>    
+</form>
+</div>
+<div class="container" style="position: absolute; width:99%; top:90.5% ;">
+<div class="navbar" >
+  		<a href="{% url 'Home' %}" >Home</a>
+                          <a href="{% url 'Contact' %}" target="_blank">Contact</a>
+                          <p style="color:white; float: right ;padding-right: 620px; font-size: 20px;"> Copyright-2021. Nitin Sanatan </p>
+                                
+</br>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+<title>Home</title>
+   <link rel="stylesheet" href="{%static 'css/stylehome.css' %}">
+   <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <script src="{% static 'css/script.js' %}"></script>
+</head>
+
+	<body background= "{%static 'pic/img2.jpg' %}" style="height: 100vh;overflow: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;">
+
+<div class="image" style=" height: 115%;">
+<div class="text-block" style="left: 276px;   height: 86px; background-color: rgba(255, 30, 0, 0.6);">
+<h1 style="font-size: 52px;font-family:'Merienda One', cursive; ">Credit Approval Website</h1>
+</div>
+<div class="container" style="position: absolute;width:100%; top: 16vh; ">
+<div class="navbar" style="padding-left:250px;">
+  		<a href="{% url 'Home' %}">Home</a>
+                                <a href="{% url 'Predict' %}" target="_blank">Predict</a>
+                                <a href="{% url 'Charts' %}" target="_blank">Visualise</a>
+                               <a href="{% url 'Contact' %}" target="_blank">Contact</a>
+                              <a href="{% url 'About' %}" target="_blank">About Us</a>    
+</div>
+</div>
+  
+
+<div class="text">
+<p style="font-size: 35px; font-family: Lucida Handwriting;text-align: center;">Check your </p>
+  <span
+     class="txt-rotate"
+     style=" font-family: Fantasy; padding-left: 75px;"
+     data-period="800"
+     data-rotate='[ "Credit Score.","Loan Approval." ]'>
+</span>
+</div>
+
+<div class="slideshow-container">
+<center><h2 style="font-family: Monaco; font-size: 33px; color: white;">Data Visualisation</h2></center>
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <div class="fext"style="float: left;padding-right: 20px;"> Dataset consists of 2 Classes(+ or -) </br>
+  383 application are accepted, whereas 306 were rejected. </div>
+ <a href="C:\Users\Asus\Desktop\santa\html\nitin\gallery.html" target="_blank">
+  <img src="{% static 'pic/approve.png' %}" style="padding-left: 120px;width: 68%; height: 20%;">
+ </a>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <div class="fext"style="padding-right: 20px;"> People of Age 18-80 are mainly applying for loans.</div>
+ <a href="C:\Users\Asus\Desktop\santa\html\nitin\gallery.html" target="_blank">
+  <img src="{% static 'pic/age.png' %}" style="padding-left: 70px;width: 80%; height: 85%;">
+ </a>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <div class="fext"style="padding-right: 20px;"> It is observed that outstanding loan amount
+  of persons applying are very less.</div>
+ <a href="C:\Users\Asus\Desktop\santa\html\nitin\gallery.html" target="_blank">
+  <img src="{% static 'pic/outstand.png' %}" style="padding-left: 115px;width: 68%; height: 15%;">
+ </a>
+</div>
+
+<div style="text-align:center;">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+</div>
+
+<div class="container" style="position: absolute;width:100%; bottom: 1%; ">
+<div class="foot">
+                          <p style="color:white; float: right ;padding-right: 620px; font-size: 20px;"> Copyright-2021. Nitin Sanatan </p>
+                        <a href="https://www.linkedin.com/in/nitinsanatan/" class="fa fa-linkedin" target="_blank"></a>
+                       <a href="https://twitter.com/SanatanShukla58" class="fa fa-twitter" target="_blank"></a>
+                       <a href="https://www.instagram.com/nitin__s_/" class="fa fa-instagram" target="_blank" ></a>
+                                
+</br>
+</div>
+</div>
+
+<script>
+
+var slideIndex = 0;
+showSlides();
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 7000); 
+}
+</script>
+
+</body>
+</html>

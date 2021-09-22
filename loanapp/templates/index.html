@@ -1,0 +1,73 @@
+<html>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/stylehome.css' %}">
+<title> Prediction Page </title>
+<div class="bm-img">
+<img src="{% static 'pic/img1.jpg' %}" style="height: 200%;width: 200%;">
+</div>
+<div class="loginbox" style="width: 900px; height: 603px; top:48%; background-color: rgba(0,0,0,0.7);">
+<img src="{% static 'pic/icon.png' %}" class="logo">
+<h1 style="font-size:30px;">Check your Eligibility</h1>
+
+<form action="{% url 'Result' %}">
+{% csrf_token %}
+<div class="line" style="left: 1%; display: inline-block;">
+<p style="font-size: 22px;">Name</p>
+<input type="text" required name="Name" placeholder="Enter Name">
+</div>
+<div class="line" style="display: inline-block; float: right;">  
+<p style="font-size: 22px">A2</p>
+<input type="text" required name="A2" placeholder="Enter value from 0-1">
+</div>  
+<div class="line" style="left: 1%; display: inline-block;">
+<p style="font-size: 22px;">A3</p>
+<input type="text" required name="A3" placeholder="Enter value from 0-1">
+</div>
+<div class="line" style="display: inline-block; float: right;">  
+<p style="font-size: 22px">A4</p>
+<input type="text" required name="A4" placeholder="Enter value from 0-1">
+</div>  
+<div class="line" style="left: 1%; display: inline-block;">
+<p style="font-size: 22px;">A5</p>
+<input type="text" required name="A5" placeholder="Enter value from 0-1">
+</div>
+<div class="line" style="display: inline-block; float: right;">  
+<p style="font-size: 22px">A6</p>
+<input type="text" required name="A6" placeholder="Enter value from 0-1">
+</div>  
+<div class="line" style="left: 1%; display: inline-block;">
+<p style="font-size: 22px;">A7</p>
+<input type="text" required name="A7" placeholder="Enter value from 0-1">
+</div>
+<div class="line" style="display: inline-block; float: right;">  
+<p style="font-size: 22px">A8</p>
+<input type="text" required name="A8" placeholder="Enter value from 0-1">
+</div>  
+<div class="line" style="left: 1%; display: inline-block;">
+<p style="font-size: 22px;">A11</p>
+<input type="text" required name="A11" placeholder="Enter value from 0-1">
+</div>
+<div class="line" style="display: inline-block; float: right;">  
+<p style="font-size: 22px">A14</p>
+<input type="text" required name="A14" placeholder="Enter value from 0-1">
+</div>  
+
+<div class="line" style="display: inline-block; float: center;padding-left: 220px;">  
+<input type="submit"  value="Submit" >
+</div>
+
+</form>
+</div>
+
+<div class="container" style="position: absolute; width:85%; top:90.5% ;  ">
+<div class="navbar" >
+  		<a href="{% url 'Home' %}" >Home</a>
+                          <a href="{% url 'Contact' %}" target="_blank">Contact</a>
+                          <p style="color:white; float: right ;padding-right: 420px; font-size: 20px;"> Copyright-2021. Nitin Sanatan </p>
+                                
+</br>
+</div>
+</div>
+
+</html>
